@@ -1,0 +1,61 @@
+# Kodi Media Center language file
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en_GB\n"
+
+msgctxt "#32000"
+msgid "General"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Use OpenSubtitles v3 (free, no account)"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Extra Stremio subtitle links"
+msgstr ""
+
+msgctxt "#32003"
+msgid "File with more links"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Wait for each link (seconds)"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Show all languages"
+msgstr ""
+
+msgctxt "#32006"
+msgid "Send file details of local files for exact matches"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Stremio's official OpenSubtitles v3 add-on. Works without an account or key."
+msgstr ""
+
+msgctxt "#32012"
+msgid "Install links of other Stremio or Nuvio subtitle add-ons (SubMaker, SubSource, Wyzie...), separated by spaces. Both https://.../manifest.json and stremio://... links work. These links often hold your settings and keys: keep them private."
+msgstr ""
+
+msgctxt "#32013"
+msgid "A text file with one install link per line, easier than typing long links with a remote. Lines starting with # are ignored."
+msgstr ""
+
+msgctxt "#32014"
+msgid "Links that take longer are skipped for this search. All links are asked at the same time."
+msgstr ""
+
+msgctxt "#32015"
+msgid "Off: only the subtitle languages set in Kodi (Settings - Player - Language). On: every language the add-ons return."
+msgstr ""
+
+msgctxt "#32016"
+msgid "For files on this device or the network (not internet streams): sends the file name, size and OpenSubtitles hash, so add-ons can find subtitles made for that exact file."
+msgstr ""
+
+msgctxt "#32020"
+msgid "Could not download this subtitle"
+msgstr ""

@@ -1,0 +1,61 @@
+# Kodi Media Center language file
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ar_SA\n"
+
+msgctxt "#32000"
+msgid "General"
+msgstr "عام"
+
+msgctxt "#32001"
+msgid "Use OpenSubtitles v3 (free, no account)"
+msgstr "استخدام OpenSubtitles v3 (مجاني، بلا حساب)"
+
+msgctxt "#32002"
+msgid "Extra Stremio subtitle links"
+msgstr "روابط إضافية لإضافات ترجمة Stremio"
+
+msgctxt "#32003"
+msgid "File with more links"
+msgstr "ملف فيه روابط أخرى"
+
+msgctxt "#32004"
+msgid "Wait for each link (seconds)"
+msgstr "مدة الانتظار لكل رابط (ثوانٍ)"
+
+msgctxt "#32005"
+msgid "Show all languages"
+msgstr "إظهار كل اللغات"
+
+msgctxt "#32006"
+msgid "Send file details of local files for exact matches"
+msgstr "إرسال تفاصيل الملفات المحلية لمطابقة دقيقة"
+
+msgctxt "#32011"
+msgid "Stremio's official OpenSubtitles v3 add-on. Works without an account or key."
+msgstr "إضافة OpenSubtitles v3 الرسمية من Stremio. تعمل دون حساب أو مفتاح."
+
+msgctxt "#32012"
+msgid "Install links of other Stremio or Nuvio subtitle add-ons (SubMaker, SubSource, Wyzie...), separated by spaces. Both https://.../manifest.json and stremio://... links work. These links often hold your settings and keys: keep them private."
+msgstr "روابط تثبيت إضافات ترجمة أخرى من Stremio أو Nuvio (مثل SubMaker وSubSource وWyzie)، تفصل بينها مسافة. تعمل الروابط بصيغة https://.../manifest.json وstremio://... وغالباً تحمل هذه الروابط إعداداتك ومفاتيحك، فلا تنشرها."
+
+msgctxt "#32013"
+msgid "A text file with one install link per line, easier than typing long links with a remote. Lines starting with # are ignored."
+msgstr "ملف نصي فيه رابط تثبيت في كل سطر، أسهل من كتابة الروابط الطويلة بالريموت. الأسطر التي تبدأ بـ # تُتجاهل."
+
+msgctxt "#32014"
+msgid "Links that take longer are skipped for this search. All links are asked at the same time."
+msgstr "الروابط التي تتأخر أكثر من ذلك تُتجاوز في هذا البحث. كل الروابط تُسأل في الوقت نفسه."
+
+msgctxt "#32015"
+msgid "Off: only the subtitle languages set in Kodi (Settings - Player - Language). On: every language the add-ons return."
+msgstr "مطفأ: لغات الترجمة المحددة في Kodi فقط (الإعدادات - المشغل - اللغة). مشغّل: كل اللغات التي تعيدها الإضافات."
+
+msgctxt "#32016"
+msgid "For files on this device or the network (not internet streams): sends the file name, size and OpenSubtitles hash, so add-ons can find subtitles made for that exact file."
+msgstr "للملفات على الجهاز أو الشبكة المنزلية (لا البث من الإنترنت): ترسل اسم الملف وحجمه وبصمة OpenSubtitles، لتجد الإضافات ترجمة مصنوعة لهذا الملف بالضبط."
+
+msgctxt "#32020"
+msgid "Could not download this subtitle"
+msgstr "تعذّر تنزيل هذه الترجمة"
