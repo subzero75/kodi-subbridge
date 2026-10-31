@@ -12,6 +12,24 @@ A Kodi subtitle add-on that gets subtitles from **Stremio subtitle add-ons**. It
 1. Download `service.subtitles.subbridge-x.y.z.zip` from [Releases](../../releases).
 2. In Kodi go to Add-ons → Install from zip file, and pick the zip.
 3. Play something, open the subtitle menu and choose **Download** → **SubBridge**.
+4. Optional: to make it the one that opens by default, pick SubBridge in Kodi under Settings → Player → Subtitles → Default TV show service / Default movie service.
+
+### Checking a download
+
+The zip in each release is built by GitHub from the release's tag (see `.github/workflows/release.yml`), not uploaded by hand, and GitHub signs where it came from. To check a zip you downloaded:
+
+```
+gh attestation verify service.subtitles.subbridge-x.y.z.zip -R subzero75/kodi-subbridge
+```
+
+Each release also has a `.sha256` file with the zip's checksum.
+
+## Works well with Subtitle Cycler
+
+[Subtitle Cycler](https://github.com/subzero75/kodi-subtitle-cycler) (2.5.0 or newer) asks Kodi's chosen subtitle service first, so with SubBridge chosen:
+
+- **One button** loads SubBridge's results one after another.
+- **"Load a subtitle automatically for every video"** loads SubBridge's first result a moment after the video starts. Turn off a4kSubtitles' own Auto Search and Auto Download if you use it, so the two don't get in each other's way.
 
 ## Adding more Stremio subtitle add-ons (optional)
 
