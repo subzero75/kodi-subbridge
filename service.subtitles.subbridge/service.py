@@ -147,15 +147,23 @@ def do_search(handle, p, manual=False):
         wanted, sorted(extra)))
     answer = collect(info, extra, timeout)
     found = results(answer, wanted, util.setting_bool('all_languages', False), extra.get('filename', ''))
-    util.log('%d subtitles listed' % len(found))
+    t0 = time.time()
+    names = {}  # language names and flags once per language, not once per subtitle
+    items = []
     for r in found:
-        li = xbmcgui.ListItem(label=langs.name(r['lang'], r['variant']), label2=r['label2'])
-        li.setArt({'icon': '5' if r['sync'] else '0', 'thumb': langs.flag(r['lang'], r['variant'])})
+        key = (r['lang'], r['variant'])
+        if key not in names:
+            names[key] = (langs.name(*key), langs.flag(*key))
+        # offscreen: built without waiting for Kodi's screen lock, much quicker
+        li = xbmcgui.ListItem(label=names[key][0], label2=r['label2'], offscreen=True)
+        li.setArt({'icon': '5' if r['sync'] else '0', 'thumb': names[key][1]})
         li.setProperty('sync', 'true' if r['sync'] else 'false')
         li.setProperty('hearing_imp', 'true' if r['hi'] else 'false')
         data = {'url': r['url'], 'filename': r['release'], 'lang': r['lang'], 'source': r['source']}
         url = 'plugin://%s/?action=download&data=%s' % (util.ADDON_ID, quote(json.dumps(data)))
-        xbmcplugin.addDirectoryItem(handle=handle, url=url, listitem=li, isFolder=False)
+        items.append((url, li, False))
+    xbmcplugin.addDirectoryItems(handle, items, len(items))
+    util.log('%d subtitles listed (%.2fs)' % (len(found), time.time() - t0))
 
 
 def _subtitle_bytes(raw, url):
@@ -218,7 +226,7 @@ def do_download(handle, p):
     with open(path, 'wb') as fh:
         fh.write(raw)
     util.log('downloaded from %s in %.1fs: %s' % (data.get('source'), time.time() - start, os.path.basename(path)))
-    xbmcplugin.addDirectoryItem(handle=handle, url=path, listitem=xbmcgui.ListItem(label=path), isFolder=False)
+    xbmcplugin.addDirectoryItem(handle=handle, url=path, listitem=xbmcgui.ListItem(label=path, offscreen=True), isFolder=False)
 
 
 def main():
